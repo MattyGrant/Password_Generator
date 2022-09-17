@@ -1,0 +1,40 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="titleOne">Generate a</h1>
+            <h1 id="titleTwo">random password</h1>
+            <p>Never use a boring unsecure password again</p>
+            <form id="passwordGeneratorForm" class="form">
+                <div>
+                    <label for="characterNumber">Total Characters</label>
+                    <input type="range" min="1" max="18" value="1" id="characterRange">
+                    <input type="number" id="characterNumber" min="1" max="18" value="1" id="characterNumber">           
+                </div>
+                <div>
+                    <label for="useUppercase">Include Uppercase</label>
+                    <input type="checkbox" id="useUppercase">
+                </div>
+                <div>
+                    <label for="useSymbols">Include Symbols</label>
+                    <input type="checkbox" id="useSymbols">
+                </div>
+                <div>
+                    <label for="useNumbers">Include Numbers</label>
+                    <input type="checkbox" id="useNumbers"> 
+                </div>  
+                <button id="generateBtn" class="btn" type="submit"> Generate Passwords</button>
+            </form>
+            <hr>
+            <div id="passwords">
+                <p id="passwordDisplayOne"></p>
+                <p id="passwordDisplayTwo"></p>
+            </div>
+        </div>
+    </body>
+</html>
