@@ -33,6 +33,7 @@ const matchCharacterInput = (evt) => {
     characterNumber.value = value
 }
 
+// CharCode array push
 const ArrayFromLowToHigh = (low, high) => {
     const array = []
     for (let i = low; i <= high; i++) {
@@ -41,6 +42,7 @@ const ArrayFromLowToHigh = (low, high) => {
     return array
 }
 
+// CharCode variables and array concat
 const uppercase_CharCode = ArrayFromLowToHigh(65, 90);
 const lowercase_CharCode = ArrayFromLowToHigh(97, 122);
 const numbers_CharCode = ArrayFromLowToHigh(48, 97);
@@ -52,6 +54,7 @@ const symbols_CharCode = ArrayFromLowToHigh(65, 90).concat(
     ArrayFromLowToHigh(123, 126)
 );
 
+// First random password gen
 const generatePasswordOne = (characterAmount, useUppercase, useSymbols, useNumbers) => {
     let charCodes = lowercase_CharCode
     if (useUppercase) charCodes = charCodes.concat(uppercase_CharCode)
@@ -65,6 +68,7 @@ const generatePasswordOne = (characterAmount, useUppercase, useSymbols, useNumbe
     }
     return passwordCharacters.join('')
 }
+// Second random password gen
 const generatePasswordTwo = (characterAmount, useUppercase, useSymbols, useNumbers) => {
     let charCodes = lowercase_CharCode
     if (useUppercase) charCodes = charCodes.concat(uppercase_CharCode)
@@ -80,7 +84,7 @@ const generatePasswordTwo = (characterAmount, useUppercase, useSymbols, useNumbe
 }
 
 
-
+// Event listener for generate btn
 form.addEventListener('submit', evt => {
     evt.preventDefault()
     const characterAmount = characterNumber.value
