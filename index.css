@@ -1,5 +1,4 @@
 /* General Selectors */
-
 body {
     font-family: 'Inter', sans-serif;
     text-align: start;
@@ -58,9 +57,6 @@ hr {
    text-align: center;
 }
 
-#titleOne{
-}
-
 #titleTwo{
     color: #4ADF86;
 }
@@ -76,7 +72,6 @@ hr {
 }
 
 /* Shared Styles */
-
 body, 
 .btn,
 .container {
@@ -113,7 +108,6 @@ body,
 }
 
 /* Media Queries */
-
 @media (min-width: 450px) and (max-width: 650px) {
     hr {
         margin-top: .5rem;
