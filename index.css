@@ -1,13 +1,13 @@
+/* General Selectors */
+
 body {
-    background-color: #1C1C1C;
-    color: white;
-    margin: auto;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Inter', sans-serif;
+    text-align: start;
+    margin: 0 auto;
+    max-width: 775px;
+    background-color: #425065;
 }
+
 p {
    color: grey; 
    font-weight: 400;
@@ -17,31 +17,17 @@ hr {
     margin-top: 2rem;
     width: 100%;
     border: 1px solid #273549;
-    background-color: transparent;
+    background-color: #273549;
 }
-.btn {
-    background-color: #10B981;
-    color: white;
-    padding: 10px;
-    margin-top: 1rem;
-    border: none;
-    width: 180px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-}
+
+/* Main content Classes */
 .container {
     margin: auto;
-    width: 65vw;
+    width: 65%;
     background-color: #1F2937;
     padding: 3rem;
     border-radius: 1rem;
-    display: flex;
     align-items: start;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -49,49 +35,107 @@ hr {
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: 1rem; 
-    justify-content: center;
     align-items: center; 
     padding-bottom: 1rem;
 }
+
+.btn {
+    background-color: #10B981;
+    padding: .5em;
+    margin-top: 1rem;
+    border: none;
+    width: 11rem;
+    border-radius: .5em;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Main Content IDs */
 #characterNumber {
-   width: 2rem; 
+   width: 2.75em; 
+   padding-left: .25rem;
+   text-align: center;
 }
+
 #titleOne{
-    color: white;
-    margin: 0;
-    text-align: start;
 }
+
 #titleTwo{
     color: #4ADF86;
+}
+
+#passwords {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#passwordDisplayOne {
+    margin-right: 1.5rem;
+}
+
+/* Shared Styles */
+
+body, 
+.btn,
+.container {
+    display: flex;
+}
+
+body,
+.btn,
+#titleOne{
+    color: white;
+}
+
+.btn,
+.container,
+.form {
+    justify-content: center;
+}
+
+#titleOne, 
+#titleTwo {
     margin: 0; 
     text-align: start;
 }
-#passwordDisplayOne {
-    background-color: #273549;
-    color: #10B981;
-    padding: 20px;
-    border: none;
-    width: 200px;
-    margin-right: 1rem;
-    border-radius: 10px;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 5px;
-}
+
+#passwordDisplayOne,
 #passwordDisplayTwo {
-    background-color: #273549;
-    color: #10B981;
-    padding: 20px;
-    border: none;
-    width: 200px;
-    border-radius: 10px;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 5px;
+   background-color: #273549;
+   text-align: center;
+   color: #10B981;
+   padding: 20px;
+   border: none;
+   width: 50%;
+   border-radius: .625em;
+}
+
+/* Media Queries */
+
+@media (min-width: 450px) and (max-width: 650px) {
+    hr {
+        margin-top: .5rem;
+        width: 100%;
+        border: 1px solid #273549;
+        background-color: #273549;
+    }
+    .container{
+        width: 70%;
+    }
+    .form {
+        padding-bottom: 0; 
+    }
+    .btn {
+        margin: 0 auto;
+    }
+    #passwords {
+        flex-direction: column;
+    }
+    #passwordDisplayOne,
+    #passwordDisplayTwo {
+        width: auto;
+        margin-right: 0;
+    }
 }
