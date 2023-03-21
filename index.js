@@ -1,4 +1,4 @@
-// Goals:
+
 // Create a button to generate the 2 different random passwords
 // display the two passwords in the spaces below
 // create a form to adjust the password length
